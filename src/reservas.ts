@@ -51,11 +51,6 @@ class CalcularReservasTourOperador extends CalcularReservas {
     const precioBase = super.precioSinIVA;
     return precioBase * (1 - this.descuento);
   }
-
-  get precioConIVA(): number {
-    const precioBase = super.precioConIVA;
-    return precioBase * (1 - this.descuento);
-  }
 }
 
 const calcularPrecioTourOperador = new CalcularReservasTourOperador(reservas);
@@ -131,10 +126,6 @@ export class CalcularTourOperador extends CalcularBase {
 
   get precioSinIVA(): number {
     return super.precioSinIVA * (1 - this.descuento);
-  }
-
-  get precioConIVA(): number {
-    return super.precioConIVA * (1 - this.descuento);
   }
 }
 
